@@ -3,7 +3,10 @@
 import sys
 import time
 import requests
-import simplejson as j
+try:
+    import simplejson as j
+except ImportError:
+    import json as j
 
 def fetch_data(a, url, recs):
   d = {
